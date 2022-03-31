@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.st0 {
+    fill: #785545;
+}
+
+.st1 {
+    fill: #46352B;
+}
+
+.st2 {
+    fill: #D9C7A8;
+}
+
+.st3 {
+    fill: #010101;
+}
+
+.st4 {
+    fill: #E6E6E3;
+}
+
+@keyframes spin{
+ from{
+    transform: rotate(-40deg);
+ }
+ to{
+    transform: rotate(40deg);
+}
+}
+/* @keyframes w{
+    0%{
+
+    }
+} */
+
+
+#wal{
+    width: 700px;
+    animation-name: spin;
+    /* animation-name: w; */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(1, 0.06, 0.35, 0.95);
+    transform-origin: bottom;
+    
+}
+
+#wal .st2{
+    cursor: pointer;
+}
+
+#wal .st2:hover+.st3{
+    fill: #d60000;
+}
